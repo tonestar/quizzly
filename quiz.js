@@ -3,24 +3,24 @@
 
 const quizSteps = [
     {
-        question: "Who is Prime Minister of the United Kingdom?",
-        choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"],
-        correctAnswer: 0
+        question: "Who is Prime Minister of New Zealand?",
+        choices: ["John Key", "Jacinda Ardern", "Bill English", "Chris Warner"],
+        correctAnswer: 2
     },
     {
-        question: "Who is Poo?",
-        choices: ["You", "Who", "Schmoo", "Tony Blair"],
+        question: "Who is the Mayor of Wellington?",
+        choices: ["Justin Lester", "Blanketman RIP", "Ewen Chatfield", "Peter Jackson"],
         correctAnswer: 1
     },
     {
         question: "Who is a fish?",
-        choices: ["Anus", "Bnus", "Carp", "Pnus"],
+        choices: ["Roger", "Bruce", "Carp", "Frank"],
         correctAnswer: 3
     },
     {
-        question: "jadflva",
-        choices: ["Yes", "No", "Yeessssssssssss", "Still not Tony Blair"],
-        correctAnswer: 2
+        question: "What's the best Pizza place in Wellington?",
+        choices: ["Scopa", "Heaven", "Tommy Millions", "Mr Bun"],
+        correctAnswer: 3
     }
 ];
 
@@ -62,7 +62,6 @@ function checkFinished() {
 }
 
 function renderQuestion(quizStep) {
-    const inputName = "question[0]";
     questionEl.innerHTML = quizStep.question;
 
     quizStep.choices.forEach(function(questionText, index) {
@@ -70,7 +69,6 @@ function renderQuestion(quizStep) {
                                 type="radio" 
                                 data-index=${index} 
                                 id="item${index}" 
-                                name="${inputName}"
                                 value="${index}">
                             <label for="item${index}">${questionText}</label>
                             <br>`;
